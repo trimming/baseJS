@@ -10,18 +10,28 @@
 
 <body>
     <script>
-        "Use script";
-        let a = -3;
-        let b = 12;
-        if (a >= 0 && b >= 0) {
-            alert(a - b);
-        }
-        if (a < 0 && b < 0) {
-            alert(a * b);
-        }
-        if (a < 0 && b >= 0 || a >= 0 && b < 0) {
-            alert(a + b)
-        }
+
+        "use strict";
+        const products = [
+            {
+                id: 3,
+                price: 200,
+            },
+            {
+                id: 4,
+                price: 900,
+            },
+            {
+                id: 1,
+                price: 1000,
+            },
+        ];
+        const copy = []; // Создаем пустой массив в который будем копировать объекты с новым свойством price
+        products.forEach(function (element) {
+            console.log(element.price -= (element.price * 15) / 100);
+            copy.push(element);
+        });
+
     </script>
 </body>
 

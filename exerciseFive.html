@@ -10,40 +10,11 @@
 
 <body>
     <script>
-        "use script";
-        function addOperation(a, b) {
-            return a + b;
-        }
-
-        function subtractionOperation(a, b) {
-            return a - b;
-        }
-
-        function divisionOperation(a, b) {
-            return a / b;
-        }
-
-        function multiplicationOperation(a, b) {
-            return a * b;
-        }
-        function mathOperation(arg1, arg2, operation) {
-            switch (operation) {
-                case addOperation:
-                    console.log(addOperation(arg1, arg2));
-                    return addOperation(arg1, arg2);
-                case subtractionOperation:
-                    console.log(subtractionOperation(arg1, arg2));
-                    return subtractionOperation(arg1, arg2);
-                case divisionOperation:
-                    console.log(divisionOperation(arg1, arg2));
-                    return divisionOperation(arg1, arg2);
-                case multiplicationOperation:
-                    console.log(multiplicationOperation(arg1, arg2));
-                    return multiplicationOperation(arg1, arg2);
-            }
-
-        }
-        alert(mathOperation(7, 8, divisionOperation));
+        "use strict";
+        function outputNumbers(a) {
+            console.log(a);
+        };
+        for (let i = 0; i <= 9; outputNumbers(i++)) { };
     </script>
 </body>
 
