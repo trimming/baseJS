@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        "use strict";
+        const products = [
+            {
+                id: 3,
+                price: 200,
+            },
+            {
+                id: 4,
+                price: 900,
+            },
+            {
+                id: 1,
+                price: 1000,
+            },
+        ];
+        const copy = []; // Создаем пустой массив в который будем копировать объекты с новым свойством price
+        products.forEach(function (element) {
+            console.log(element.price -= (element.price * 15) / 100);
+            copy.push(element);
+        });
+
+    </script>
+</body>
+
+</html>
