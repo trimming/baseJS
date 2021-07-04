@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript"
+        src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=QWNZUwrOBU20GWnzGgMawBYnBfTkIvqI0LYz9i-7VlHB9xinAhH7eeGnVDtK5FX9G7TzUON11-kIsVmY6_-QDjNQ1w2O5Pr5zYjRVz6N56UiGaGfm0NZEQuR6BZ1TicmkfwZdBoHxTtaPZJf27TQgJQnXQFBqMzENCQS5dhz-Kcw45lT8GvRZ1eE71B5bsy8UV5bEQZFjejAHd_DZffggk_2nF3PKRmvUDyxXnx9lpXc6jj-vCfurvbnBQQR-DzvXn-gp0bw6s_VIIi918KXkdDw1a7k_dYwkC1TMC4So30lpKkSqHvi9v9XwZMzL1dsNjOwtBxvje3y8ZuIRictFTKXZytJenqTmDC04vnY4slnfH9nEXnabuzQg9v8hYNMScYDW754IwSBZ71JVum2a_YGen8kChc70s0dKEd1CeIkpsAwXsQ4xe-SVVtxtVO-zriMoAbC8tjtZYD_kVFqf4KXIdZRh60z13TwuKaCj4uL4e58ZpMUBSawIJ5etuBrQTf6zigQUqm7QLMDoeeIg34q3jc9NPzlAl7DXgdCHdXAOYI1uaV1RByWmcj9B6mEZGr7AMHfto9UZScEBAC9ccATlAByBjNSCJy7br96ihuxN9ETNQXik6oM29qucG1BBOrVhdCJAC8KDW2DBprt3oHGEzHajOiInXP6z1lkpGvW6YRQzOB0FFI8_ubE4ZnJ2whzf49px1ucWaNdURmnVt3vX1FR4OLV1eAZUK6GqftI7-aeebKp6V6PXaBzpKFE3wGdEKVW4UTtLumBUuy_ojzhS0CIlLcYLFmYSTxPLyYGJ4JEuxBYrxCUikntlIuyDKNJ5aZeGun7MQknSNwlqyQBQsF0ndfaHObBeMwfTVVql6QMV7xt2PgPduohjpgsBpOAvG9j_BAN9p3dPLYw8aoN9cSVt-rAb7IMhJET-pcQFkfzbTwhvbQCJ8vKpUb1lveljovQcM_XvBaRODwJUHzrULwKNJjl6gL161NHAftobPPptt8yViLisKteRfSjKJq1CKH8S_-00HjKSljcLLHQCXIXTcWyTwGn5Bv_zYAnFJ-mCPs-wHwaZj1rbLyYNVLEzazoc5_Lm3nfdSDPMFJYc7GiRpY6caqYBM7ejwu0HNw6ZJ0Hsz6csiiUr2PY1arVGT9HecLkIkO7j6AL0QavOm9Zytsh0MFZ16Tc1rcVtMz0o5Tnx9kJh7Ii96XSX0tX-JOAMCEnRGttGE9qam9E4-W2jyOarvTEqZFpevG4CytwlH4vykTmrbyl6oeWtaP6FJA3aq7KjM39_rskrBxdXuT3qAdO8np1hxEmEz-W3RJ3tV-1J2yqD66DpwTM1mb6MHFjsyM7nYTPQwcgdtVopkJ0kJZ_8PCUNOl17vExzFIkWeI9XyUGzqVGDZjd4BDMbVQic05xY9MBdHcb02dh3T1wufSx-JSTigxJrx2xCszOMh3btZCwG7lYY0K0LJ2gtXBFBuc81nX3OMZxrdyMFpwl0i6smMmrqEWI5CUfvGuQaaXUErc3YrNB7Y70O46H__TfSZ8hdZ-6ebrjcjX7enNW4HmMWgBMtlEakgPspnR4VtoFuHSgaGGJN_1RNW7VTgZSbwclFLsJgF-t6hA7wEukz4HaVdnRggLGuQ6eSCRjNELhO_04YP81jYP9"
+        charset="UTF-8"></script>
+</head>
+
+<body>
+    <div>Lorem, ipsum dolor.</div>
+    <div>Lorem, ipsum dolor.</div>
+    <div>Lorem, ipsum dolor.</div>
+
+    <!-- Задание. Найдите все дивы и добавьте им padding: 10px, для этого:
+    1. Найдите все дивы, например с помощью getElementsByTagName.
+    2. Затем с помощью цикла пройдитесь по этой коллекции, и обращаясь к
+    каждому элементу, обратитесь к его свойству style, а затем к свойству
+    padding. -->
+
+    <script>
+        'use strict';
+        let getDiv = document.getElementsByTagName('div');
+        for (let i = 0; i < getDiv.length; i++) {
+            getDiv[i].style.padding = '10px';
+        }
+    </script>
+</body>
+
+</html>
