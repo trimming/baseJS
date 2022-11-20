@@ -18,5 +18,11 @@ let renderer = {
             this.map += '\n';
         }
         console.log(this.map);
+    },
+    clear() {
+        //Чистимконсоль.
+        console.log();
+        //Чистим карту
+        this.map = "";
     }
 };
