@@ -6,9 +6,9 @@ function ConvertedNumber(units, tens, hundereds) {
     this.hundereds = hundereds;
 }
 ConvertedNumber.prototype.getNumber = function (number) {
-    if (Number.isInteger(number) && number >= 100 && number < 1000) {
+    if (Number.isInteger(number) && number >= 100 && number < 999) {
         this.units = number % 10;
-        this.tens = Math.floor((number - (Math.floor(number / 100) * 100)) / 10);
+        this.tens = Math.floor(number / 10) % 10;
         this.hundereds = Math.floor(number / 100);
     } else if (Number.isInteger(number) && number < 100) {
         this.units = number % 10;
@@ -29,5 +29,5 @@ ConvertedNumber.prototype.getNumber = function (number) {
 
 
 let userNumber = new ConvertedNumber();
-userNumber.getNumber(112.3);
+userNumber.getNumber(parseInt(prompt("Введите целое число от 0 до 999.")));
 console.log(userNumber);
