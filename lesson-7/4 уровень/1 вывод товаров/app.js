@@ -75,10 +75,10 @@ const products = {
     ],
 };
 let buttons = document.querySelectorAll('button');
-let product = document.querySelector('.products');
+let selectCategory = document.querySelector('.products');
 buttons.forEach(button => {
     button.addEventListener('click', clickHandler);
-})
+});
 /**
  * Эта функция должна вызываться при клике по кнопкам.
  * @param {MouseEvent} event
@@ -88,7 +88,9 @@ function clickHandler(event) {
 
     //в showCategory надо передать строку с типом категории, тип берите
     //из атрибута data-type у кнопки, по которой кликнули.
-
+    selectCategory.innerText = '';
+    console.log(event.target.dataset.type);
+    showCategory(event.target.dataset.type);
 }
 
 /**
@@ -99,7 +101,27 @@ function clickHandler(event) {
  * по которой кликнули.
  */
 function showCategory(category) {
-
+    let generatedText = '';
+    switch (category) {
+        case "phones":
+            products.phones.forEach(element => {
+                generatedText = getProductMarkup(element);
+                selectCategory.insertAdjacentHTML('beforeend', generatedText);
+            });
+            break;
+        case "tablets":
+            products.tablets.forEach(element => {
+                generatedText = getProductMarkup(element);
+                selectCategory.insertAdjacentHTML('beforeend', generatedText);
+            });
+            break;
+        case "tv":
+            products.tv.forEach(element => {
+                generatedText = getProductMarkup(element);
+                selectCategory.insertAdjacentHTML('beforeend', generatedText);
+            });
+            break;
+    }
 }
 
 /**
@@ -112,5 +134,8 @@ function showCategory(category) {
  * в верху этого файла.
  */
 function getProductMarkup(product) {
-
+    return `<div>${product.name}</div>
+   <img src="${product.imageUrl}" alt="">
+   <div>${product.price}</div>
+   <a href="https://example.com/producs/${product.id}">Подробнее</a>`;
 }
