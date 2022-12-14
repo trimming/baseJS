@@ -23,9 +23,9 @@ function handleClick(clickedButtonEvent) {
     // 3. создайте литерал объекта со следующими свойствами:
     const card = {
         wrap: cardNode, // здесь элемент с классом .product
-        img: cardNode.childNodes[3], // здесь картинка внутри .product
-        productName: cardNode.childNodes[1], // здесь .productName, который внутри .product
-        button: cardNode.childNodes[5], // здесь button, который внутри .product
+        img: cardNode.querySelector('img'), // здесь картинка внутри .product
+        productName: cardNode.querySelector('.productName'), // здесь .productName, который внутри .product
+        button: clickedButtonEvent, // здесь button, который внутри .product
     };
 
     // 4. получаем текст на кнопке, которая внутри .product
@@ -52,9 +52,9 @@ function hideMoreText(card) {
     // 5. картинке внутри .product ставим стиль display: block
     card.img.style.display = 'block';
     // 5.1 внутри .product находим элемент с классом .desc и удаляем его
-
+    card.wrap.querySelector('.desc').remove();
     // 5.2 кнопке, которая внутри .product ставим текст "Подробнее"
-
+    card.button.textContent = "Подробнее";
 }
 
 /**
@@ -73,4 +73,5 @@ function showMoreText(card) {
     // 6.2 внутри .product есть .productName, после него вставляем div.desc и текстом из переменной из п. 6.1    
     card.productName.insertAdjacentHTML('afterend', `<div class = desc>${textDesc}</div>`);
     // 6.3 внутри .product у кнопки текст ставим "Отмена"
+    card.button.textContent = "Отмена";
 }
