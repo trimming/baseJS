@@ -186,7 +186,7 @@ let app = {
         }
         console.log(tr);
         // 8.4 получаем тег tbody
-        let tbody = document.createElement('tbody');
+        let tbody = document.querySelector('tbody');
         // 8.5 и в него перед </tbody> вставляем значение из переменной tr
         tbody.insertAdjacentElement("beforeend", tr);
     },
